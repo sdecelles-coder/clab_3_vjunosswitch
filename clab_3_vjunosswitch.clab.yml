@@ -4,15 +4,18 @@ topology:
     sw1:
       kind: juniper_vjunosswitch
       image: vr-vjunos-switch:25.2R1.9
-      mgmt-ipv4: 172.20.20.11/24
+      mgmt-ipv4: 172.20.20.11
+      command: "--username admin --password admin@123"
     sw2:
       kind: juniper_vjunosswitch
       image: vr-vjunos-switch:25.2R1.9
-      mgmt-ipv4: 172.20.20.12/24
+      mgmt-ipv4: 172.20.20.12
+      command: "--username admin --password admin@123"
     sw3:
       kind: juniper_vjunosswitch
       image: vr-vjunos-switch:25.2R1.9
-      mgmt-ipv4: 172.20.20.13/24
+      mgmt-ipv4: 172.20.20.13
+      command: "--username admin --password admin@123"
   links:
     - endpoints: ["sw1:eth1", "sw2:eth1"]
     - endpoints: ["sw1:eth2", "sw3:eth1"]
