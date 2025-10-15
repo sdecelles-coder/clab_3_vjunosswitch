@@ -4,12 +4,21 @@ topology:
     sw1:
       kind: juniper_vjunosswitch
       image: vr-vjunos-switch:25.2R1.9
+      env:
+        USERNAME: admin
+        PASSWORD: admin@123
     sw2:
       kind: juniper_vjunosswitch
       image: vr-vjunos-switch:25.2R1.9
+      env:
+        USERNAME: admin
+        PASSWORD: admin@123
     sw3:
       kind: juniper_vjunosswitch
       image: vr-vjunos-switch:25.2R1.9
+      env:
+        USERNAME: admin
+        PASSWORD: admin@123
   links:
     - endpoints: ["sw1:eth1", "sw2:eth1"]
     - endpoints: ["sw1:eth2", "sw3:eth1"]
